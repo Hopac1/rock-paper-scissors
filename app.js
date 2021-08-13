@@ -11,9 +11,8 @@ function userPlay() {
     return playerSelection;
 }
 
-function playRound(playerSelection, computerSelection) {
-    
 
+function playRound(playerSelection, computerSelection) {
     console.log(`Player chose: ${playerSelection}`);
     console.log(`Computer chose: ${computerSelection}`);
 
@@ -34,6 +33,7 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+
 function game() {
     let userScore = 0;
     let compScore = 0;
@@ -41,8 +41,10 @@ function game() {
         let result = playRound(userPlay(), computerPlay());
 
         if (result.includes("You win!")) {
+            console.log("You win!");
             userScore += 1;
         } else if (result.includes("You lose!")) {
+            console.log("You lost.")
             compScore += 1;
         }
         console.log(`Your score: ${userScore}. Computer score: ${compScore}`)
