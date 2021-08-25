@@ -1,0 +1,16 @@
+.button-choices {
+    border-radius: 50%;
+    margin: 10% 5% 10% 5%;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.button-choices:hover {
+    transform: scale(1.05);
+}
+
+/* .button-image {
+    height: 150px;   //not working
+} */

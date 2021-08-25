@@ -37,7 +37,7 @@ function playRound(playerSelection, computerSelection) {
 function game() {
     let userScore = 0;
     let compScore = 0;
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 999; i++) {  // Decides how many rounds to play up to
         let result = playRound(userPlay(), computerPlay());
 
         if (result.includes("You win!")) {
