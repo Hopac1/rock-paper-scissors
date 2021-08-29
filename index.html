@@ -1,19 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="app.js" defer></script>
     <link rel="stylesheet" href="styles.css">
-    </head>
+</head>
+<body>
+    <div class="container">
+        <header class="header"></header>
+            <h1>Rock Paper Scissors</h1>
+            
+        </header>
+        <h2>Make Your Selection</h2>
+    </div>
+    
+    <div class="selections">
+        
+        <button class="selection">✋</button>
+        <button class="selection">✊</button>
+        <button class="selection">✌</button>
+    </div>
 
-    <body>
-        <div class="button-container">
-            <button class="button-choices"><img class="button-image" src="images/rock.png" alt="rock-sign"></button>
-            <button class="button-choices"><img class="button-image" src="images/paper.png" alt="rock-sign"></button>
-            <button class="button-choices"><img class="button-image" src="images/scissors.png" alt="rock-sign"></button>
+    <div class="results">
+        <div>
+            You:
+            <span class="result-score">0</span>
         </div>
-    </body>
-    <script src="app.js">
-    </script>
+        <div>
+            Computer:
+            <span class="result-score">0</span>
+        </div>
+        <!-- <div class="result-selection winner">✊</div>
+        <div class="result-selection">✌</div> -->
+    </div>
+</body>
 </html>

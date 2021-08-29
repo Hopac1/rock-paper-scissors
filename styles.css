@@ -1,16 +1,60 @@
-.button-choices {
-    border-radius: 50%;
-    margin: 10% 5% 10% 5%;
+
+body {
+    background-color: rgb(226, 226, 226);
+}
+.container {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    padding: 0 2rem;
 }
 
-.button-container {
-    text-align: center;
+.selections {
+    display: flex;
+    justify-content: center;
 }
 
-.button-choices:hover {
-    transform: scale(1.05);
+.selection {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 100ms;
+    font-size: 3rem;
 }
 
-/* .button-image {
-    height: 150px;   //not working
+.selection:hover {
+    transform: scale(1.2);
+}
+
+.results {
+    margin-top: 1rem;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    background-color: rgb(243, 182, 132);
+    font-size: 2rem;
+}
+
+.result-score {
+    margin-left: 0.2rem;
+    font-size: 1.5rem;
+}
+
+.result-selection {
+    opacity: .5;
+    font-size: 1.5rem;
+    margin: 0.5rem;
+}
+
+.result-selection.winner {
+    opacity: 1;
+    font-size: 2rem;
+
+}
+
+/* .container {
+    border: solid blue 1px;
 } */
