@@ -1,6 +1,6 @@
 
 body {
-    background-color: rgb(226, 226, 226);
+    /* background-color: rgb(226, 226, 226); */
 }
 .container {
     display: grid;
@@ -54,6 +54,32 @@ body {
     opacity: 1;
     font-size: 2rem;
 
+}
+
+.restart {
+    text-align: center;
+}
+
+.restart-button {
+    color: #333;
+    background-color: #f4f4f4;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 0.4rem 1.3rem;
+}
+
+.restart-button:hover {
+    color: #fff;
+    background: #003699;
+}
+
+.winner-display {
+    text-align: center;
+    font-size: 1.7rem;
+    padding-top: 1rem;
 }
 
 /* .container {
