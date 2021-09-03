@@ -78,12 +78,18 @@ function updateScore(winner) {
 }
 
 function displayWinner(winner, playerChoice, compChoice) {
+    const choices = {
+        "rock": "✊",
+        "paper": "✋",
+        "scissors": "✌"
+    }
+
     if (winner === "player") {
-        winnerDisplayDiv.textContent = `Player ${playerChoice} beats Computer ${compChoice}, you won!`
+        winnerDisplayDiv.textContent = `Player ${choices[playerChoice]} beats Computer ${choices[compChoice]}, you won!`
     } else if (winner === "computer") {
-        winnerDisplayDiv.textContent = `Computer ${compChoice} beats Player${playerChoice}, Computer won!`
+        winnerDisplayDiv.textContent = `Computer ${choices[compChoice]} beats Player ${choices[playerChoice]}, Computer won!`
     } else {
-        winnerDisplayDiv.textContent = `Player ${playerChoice} ties with Computer ${compChoice}, it's a draw!`
+        winnerDisplayDiv.textContent = `Player ${choices[playerChoice]} ties with Computer ${choices[compChoice]}, it's a draw!`
     }
     return
 }
