@@ -1,18 +1,21 @@
+// Variables
 let userScore = 0;
 let compScore = 0;
 const userScoreSpan = document.getElementById("player-score");
 const compScoreSpan = document.getElementById("comp-score");
-const scoreboardDiv = document.querySelector(".scoreboard");
+const scoreboardSpan = document.querySelectorAll("span");
 const winnerDisplayDiv = document.querySelector(".winner-display");
 
 const buttons = document.querySelectorAll(".selection");
-const restartButton = document.querySelector("restart-button");
+const restartButton = document.querySelector(".restart-button");
 
 
+// Event Listeners
 buttons.forEach((button) => {
     button.addEventListener("click", play)
 });
 
+restartButton.addEventListener("click", restartGame);
 
 // Play game
 function play(event) {
@@ -67,9 +70,11 @@ function getWinner(playerSelection, compSelection) {
 }
 
 
-function restartGame(userScore, compScore) {
+function restartGame() {
     userScore = 0;
     compScore = 0;
+    userScoreSpan.textContent = 0;
+    compScoreSpan.textContent = 0;
     return;
 }
 
