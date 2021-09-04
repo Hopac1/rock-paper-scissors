@@ -5,13 +5,12 @@ const compScoreSpan = document.getElementById("comp-score");
 const scoreboardDiv = document.querySelector(".scoreboard");
 const winnerDisplayDiv = document.querySelector(".winner-display");
 
-const buttons = document.querySelectorAll(".selection")
+const buttons = document.querySelectorAll(".selection");
+const restartButton = document.querySelector("restart-button");
+
 
 buttons.forEach((button) => {
     button.addEventListener("click", play)
-    //  => {
-    //     const selectionName = button.dataset.selection;
-    //     makeSelection(selectionName);
 });
 
 
@@ -24,6 +23,12 @@ function play(event) {
     console.log(winner);  // Remove once finished
     updateScore(winner);
     displayWinner(winner, playerChoice, computerChoice);
+
+    if (userScore === 5) {
+        winnerDisplayDiv.textContent = "You won 5 rounds before the Computer, you win!";
+    } else if (compScore === 5) {
+        winnerDisplayDiv.textContent = "The Computer won 5 rounds before you, the Computer wins."
+    }
 
 }
 
@@ -62,9 +67,10 @@ function getWinner(playerSelection, compSelection) {
 }
 
 
-function restartGame() {
+function restartGame(userScore, compScore) {
     userScore = 0;
     compScore = 0;
+    return;
 }
 
 function updateScore(winner) {
