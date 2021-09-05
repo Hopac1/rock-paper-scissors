@@ -22,8 +22,6 @@ function play(event) {
     const playerChoice = event.target.id;
     const computerChoice = getComputerChoice();
     const winner = getWinner(playerChoice, computerChoice);
-    console.log(playerChoice, computerChoice); // Remove once finished
-    console.log(winner);  // Remove once finished
     updateScore(winner);
     displayWinner(winner, playerChoice, computerChoice);
 
@@ -35,15 +33,12 @@ function play(event) {
 
 }
 
-// Get computer's choice
 function getComputerChoice() {
     const moves = ['rock', 'paper', 'scissors']
     let compChoice = moves[Math.floor(Math.random() * moves.length)];
     return compChoice;
 }
 
-
-// Get the game winner
 function getWinner(playerSelection, compSelection) {
     if (playerSelection === compSelection) {
         return "draw";
@@ -68,7 +63,6 @@ function getWinner(playerSelection, compSelection) {
         }
     }
 }
-
 
 function restartGame() {
     userScore = 0;
